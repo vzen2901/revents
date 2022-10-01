@@ -5,12 +5,14 @@ import EventDashboard from '../../component/event/eventDashboard/EventDashboard'
 import NavBar from '../../component/nav/navBar/NavBar';
 import { Container } from 'semantic-ui-react';
 
+
+
 class App extends Component {
   render(){
     return(
       <Fragment>
         <NavBar />
-        <Container classname="main"> 
+        <Container className="main"> 
           <EventDashboard />
         </Container>
       </Fragment>
