@@ -16,18 +16,27 @@ class App extends Component {
   render(){
     return(
       <Fragment>    
-        <NavBar />
-        <Container className="main"> 
-          <Routes>
-            <Route path='/' element={<HomePage />} />
-            <Route path='/events' element={<EventDashboard />} />
-            <Route path='/events/:id' element={<EventDetailedPage />} />
-            <Route path='/people' element={<PeopleDashboard />} />
-            <Route path='/profile/:id' element={<UserDetailedPage />} />
-            <Route path='/settings' element={<SettingsDashboard />} />
-            <Route path='/createEvent' element={<EventForm />} />
-          </Routes>
-        </Container>
+        <Routes>
+          <Route path='/' element={<HomePage />} />
+          <Route 
+            path='/*'
+            element={
+              <Fragment>
+                <NavBar />
+                <Container className="main"> 
+                  <Routes>
+                    <Route path='/events' element={<EventDashboard />} />
+                    <Route path='/events/:id' element={<EventDetailedPage />} />
+                    <Route path='/people' element={<PeopleDashboard />} />
+                    <Route path='/profile/:id' element={<UserDetailedPage />} />
+                    <Route path='/settings' element={<SettingsDashboard />} />
+                    <Route path='/createEvent' element={<EventForm />} />
+                  </Routes>
+                </Container>
+              </Fragment>
+            }
+          />
+        </Routes>
       </Fragment>
     );
   }

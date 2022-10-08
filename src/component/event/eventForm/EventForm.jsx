@@ -29,7 +29,6 @@ class EventForm extends Component {
                   <label>Event Title</label>
                   <input 
                   placeholder="event title" 
-                  
                   />
                 </Form.Field>
                 <Form.Field>

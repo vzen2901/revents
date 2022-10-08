@@ -1,5 +1,4 @@
 import React from 'react'
-import { HashRouter, Route, Router } from 'react-router-dom'
 
 const AboutPage = () => {
   return (
@@ -9,4 +8,4 @@ const AboutPage = () => {
   )
 }
 
-export default AboutPage
+export default AboutPage;
