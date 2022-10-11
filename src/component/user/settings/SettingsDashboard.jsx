@@ -1,11 +1,19 @@
-import React from 'react'
+import React from 'react';
+import { Grid } from 'semantic-ui-react';
+import SettingsNav from './SettingsNav';
+
+
 
 const SettingsDashboard = () => {
   return (
-    <div>
-      <h1>SettingsDashboard</h1>
-    </div>
-  )
+          <Grid>
+            <Grid.Column width={12}>
+            </Grid.Column>
+            <Grid.Column width={4}>
+              <SettingsNav />
+            </Grid.Column>
+          </Grid>
+  );
 }
 
-export default SettingsDashboard
+export default SettingsDashboard;
